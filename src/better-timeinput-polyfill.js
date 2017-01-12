@@ -70,7 +70,7 @@
             return timeinput;
         },
         onKeydown: function(which, shiftKey) {
-            return which === 186 && shiftKey || which < 58;
+            return (which === 186 && shiftKey) || (which === 190 && shiftKey) || which < 58;
         },
         onChange: function(timeinput, ampmselect) {
             var parts = timeparts(this.get()),
